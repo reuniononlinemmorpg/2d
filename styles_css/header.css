@@ -80,6 +80,20 @@
     color: var(--text-color-menu);
 }
 
+.nav__link--highlight {
+    background-color: #ffd700;
+    color: #111;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav__link--highlight:hover {
+    background-color: #e5c100;
+}
+
+
 .header__wrapper-text {
     padding: 5% 0% 3% 15%;
     width: 56%;
@@ -208,3 +222,4 @@
         margin-top: 0rem;
     }
 }
+
