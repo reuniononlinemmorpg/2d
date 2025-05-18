@@ -1,0 +1,38 @@
+#galeria {
+  background: url(../assets/backgrounds/background_03.jpg) no-repeat center center / cover;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative; 
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: slide 5s infinite linear; /* Agora mais lento */
+}
+
+.carousel-track img {
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  background: #000; /* fundo preto caso tenha bordas */
+}
+
+/* Animação */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+

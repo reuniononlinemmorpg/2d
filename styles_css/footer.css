@@ -1,35 +1,67 @@
 .footer {
-    padding: 4.5rem 2.5rem;
+    padding: 2.5rem 3.5rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5.5rem;
+    gap: 3rem;
 
     background: var(--footer-background-color);
     color: var(--text-color-menu);
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 .footer__logo {
-    height: 15rem;
+    height: 10rem;
 }
 
 .footer__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
 
 }
 
 .footer__img {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.footer__img img {
+    width: 80px;
+    /* ou o tamanho desejado */
+    align-items: center;
+    text-align: center;
+    margin: 0 8px;
+    transition: transform 0.2s;
 }
 
 .footer__information {
     display: flex;
     gap: 3.3rem;
     justify-content: center;
+}
+
+#btnTopo {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+#btnTopo:hover {
+    background-color: #555;
 }
