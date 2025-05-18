@@ -15,7 +15,7 @@
 .carousel-track {
   display: flex;
   width: fit-content;
-  animation: slide 5s infinite linear; /* Agora mais lento */
+  animation: slide 50s infinite linear; /* Agora mais lento */
 }
 
 .carousel-track img {
@@ -28,10 +28,10 @@
 /* Animação */
 @keyframes slide {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-75%);
+    transform: translateX(-700%); /* -100% * (8 imagens - 1) */
   }
 }
 

@@ -3,9 +3,9 @@ const controlsVideo = {
     muted: true,
 
     toggleIcon() {
-        if(this.muted) {
+        if (this.muted) {
             this.buttonMute.src = "./assets/mute.svg";
-            
+
         } else {
             this.buttonMute.src = "./assets/hight.svg";
         }

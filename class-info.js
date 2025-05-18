@@ -18,7 +18,7 @@ const classInfo = {
 };
 
 document.querySelectorAll('.section__avatar').forEach(el => {
-    el.addEventListener('click', function() {
+    el.addEventListener('click', function () {
         const className = Array.from(el.classList).find(c => classInfo[c]);
         if (className) {
             document.getElementById('class-title').textContent = classInfo[className].title;
@@ -28,10 +28,10 @@ document.querySelectorAll('.section__avatar').forEach(el => {
     });
 });
 
-document.getElementById('close-modal').onclick = function() {
+document.getElementById('close-modal').onclick = function () {
     document.getElementById('class-info-modal').style.display = 'none';
 };
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById('class-info-modal');
     if (event.target === modal) {
         modal.style.display = 'none';

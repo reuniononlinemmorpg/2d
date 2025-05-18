@@ -10,6 +10,9 @@
 /* Estilo do elemento Header*/
 @import url(./header.css);
 
+/* Estilo do elemento Body*/
+@import url(./rain.css);
+
 /* Estilos dos sections */
 @import url(./section.css);
 @import url(./section-game.css);
@@ -27,3 +30,14 @@
 /* Media Query */
 @import url(./responsive-tablet.css);
 
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
