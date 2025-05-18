@@ -13,7 +13,7 @@ const classInfo = {
     },
     'is-lutador': {
         title: 'PALADIN',
-        description: 'Paladinos são guerreiros sagrados. Eles podem ser guerreiros habilidosos, apoiando aliados com seus quras e habilidades de apoio.'
+        description: 'Paladinos são guerreiros sagrados. Eles podem ser guerreiros habilidosos, apoiando aliados com suas curas e habilidades de apoio.'
     }
 };
 
