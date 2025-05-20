@@ -13,6 +13,9 @@
 <body>
     <div id="rain-container"></div>
     <div id="lightning-flash"></div>
+    <div class="language-switcher">
+        <button id="language-btn">EN</button>
+    </div>
     <header class="header">
         <nav class="nav">
             <input class="nav__checkbox" type="checkbox">
@@ -26,20 +29,21 @@
                     <img src="./assets/logo.png" height="100" alt="Logo Reunion Online" class="nav__logo">
                 </li>
                 <li><a href="#game" class="nav__link">Game</a></li>
-                <li><a href="#heros" class="nav__link">Heróis</a></li>
+                <li><a href="#heros" class="nav__link" data-i18n="nav.heros">Heróis</a></li>
                 <li><a href="#equipes" class="nav__link">STAFF</a></li>
-                <li><a href="#sobre" class="nav__link">Sobre Nós</a></li>
-                <li><a href="./noticias.html" class="nav__link nav__link--highlight">Notícias</a></li>
-                <li><a href="./play-game.html" class="nav__link">JOGAR</a></li>
+                <li><a href="#sobre" class="nav__link" data-i18n="nav.about">Sobre Nós</a></li>
+                <li><a href="./noticias.html" class="nav__link nav__link--highlight" data-i18n="nav.news">Notícias</a>
+                </li>
+                <li><a href="./play-game.html" class="nav__link" data-i18n="play_now">JOGAR</a></li>
             </ul>
         </nav>
         <div class="header__wrapper-text">
             <h1 class="header__title">Reunion Online - MMORPG 2D</h1>
-            <h2 class="header__subtitle">
+            <h2 class="header__subtitle" data-i18n="header.subtitle">
                 Um MMORPG de mundo aberto, baseado no classíco Mu Online, onde suas escolhas definem o destino. Lute,
                 sobreviva e conquiste a glória!
             </h2>
-            <a href="./play-game.html" class="btn-cta is-btn-hover">Jogue Agora</a>
+            <a href="./play-game.html" class="btn-cta is-btn-hover" data-i18n="play_now">Jogue Agora</a>
         </div>
 
         <img class="header__mute js-sound" src="./assets/mute.svg" alt="Imagem do volume do som mutado">
@@ -49,8 +53,8 @@
     <main class="main">
         <section id="game" class="section is-bg-game">
             <div class="section__wrapper-header">
-                <h2 class="section__title">Reunion Online – O Caminho para a Glória!</h2>
-                <p class="section__description">
+                <h2 class="section__title" data-i18n="game.title">Reunion Online – O Caminho para a Glória!</h2>
+                <p class="section__description" data-i18n="game.description">
                     Reunion Online é um MMORPG 2D de mundo aberto, inspirado no clássico Mu Online, onde dedicação e
                     estratégia definem os verdadeiros campeões. Com um sistema dinâmico e interativo, os NPCs agem como
                     jogadores reais, tornando cada batalha e decisão únicas.
@@ -59,50 +63,50 @@
             <div class="section__cards">
                 <div class="section__card">
                     <img src="./assets/screenshot-game/LogoReunion.png" alt="Screenshot do game">
-                    <p class="section__p">
+                    <p class="section__p" data-i18n="card1.title">
                         🏹 Explore um vasto mundo – Viaje por terras desconhecidas, enfrente monstros lendários.
                         Aventure-se em masmorras e florestas sombrias, mas lembre-se: a
                         glória é para os corajosos!
                     </p>
-                    <p class="section__p">
+                    <p class="section__p" data-i18n="card1.footer">
                         Descubra o Mundo de Reunion Online!
                     </p>
                 </div>
                 <div class="section__card">
                     <img src="./assets/screenshot-game/LogoReunion.png" alt="Screenshot do game">
-                    <p class="section__p">
+                    <p class="section__p" data-i18n="card2.title">
                         🪓 Forje suas armas – Combine diferentes equipamentos e descubra criações inéditas. Já pensou em
                         transformar uma lança em um guarda-chuva letal? No Reunion, o limite é a sua imaginação!
                     </p>
-                    <p class="section__p">
+                    <p class="section__p" data-i18n="card2.footer">
                         Crie Sua Própria Lenda.
                     </p>
                 </div>
 
                 <div class="section__card">
                     <img src="./assets/screenshot-game/LogoReunion.png" alt="Screenshot do game">
-                    <p class="section__p">
+                    <p class="section__p" data-i18n="card3.title">
                         🏆 Participe de torneios épicos e lute pelo topo do Rank dos Heróis. Os vencedores levam a Taça
                         da Glória e entram para a história!
                     </p>
-                    <p class="section__p">
+                    <p class="section__p" data-i18n="card3.footer">
                         Conquiste a Glória
                     </p>
                 </div>
 
                 <div class="section__card">
                     <img src="./assets/screenshot-game/LogoReunion.png" alt="Screenshot do game">
-                    <p class="section__p">
+                    <p class="section__p" data-i18n="card4.title">
                         🥇 O campeão supremo será eternizado com uma estátua no centro da cidade, sendo lembrado para
                         sempre como uma lenda do Reunion Online.
                     </p>
-                    <p class="section__p">
+                    <p class="section__p" data-i18n="card4.footer">
                         O melhor entre os melhores
                     </p>
                 </div>
             </div>
 
-            <em class="section__message">
+            <em class="section__message" data-i18n="game.message">
                 Reunion Loren é uma cidade lendária, inspirada em locais icônicos como Lorencia, Tarkan e Atlans de Mu
                 Online. Aqui, seus habitantes vivem em constante batalha pela glória. Apenas mérito e força têm valor —
                 não há espaço para desculpas ou mediocridade. Só os verdadeiros guerreiros deixarão sua marca na
@@ -112,8 +116,9 @@
         </section>
         <section id="galeria" class="section section-gallery">
             <div class="section__wrapper-header">
-                <h2 class="section__title">Galeria</h2>
-                <p class="section__description">Veja imagens exclusivas do Reunion Online</p>
+                <h2 class="section__title" data-i18n="gallery.title">Galeria</h2>
+                <p class="section__description" data-i18n="gallery.description">Veja imagens exclusivas do Reunion
+                    Online</p>
             </div>
             <div class="carousel">
                 <div class="carousel-track">
@@ -131,32 +136,33 @@
 
         <section id="heros" class="section is-bg-heros">
             <div class="section__wrapper-header">
-                <h2 class="section__title">Heróis</h2>
-                <p class="section__description">
+                <h2 class="section__title" data-i18n="heroes.title">Heróis</h2>
+                <p class="section__description" data-i18n="heroes.description">
                     Escolha o seu HERÓI.
                 </p>
             </div>
             <div class="section__wrapper-list">
                 <ul class="section__ul js-list">
-                    <li class="section__avatar is-cowboy">
-                        <p class="section__li-p">KNIGHT</p>
+                    <li class="section__avatar is-cowboy" data-class="knight">
+                        <p class="section__li-p" data-i18n="heroes.knight">CAVALEIRO</p>
                     </li>
-                    <li class="section__avatar is-lanceiro">
-                        <p class="section__li-p">RANGER</p>
+                    <li class="section__avatar is-lanceiro" data-class="ranger">
+                        <p class="section__li-p" data-i18n="heroes.ranger">ARQUEIRO</p>
                     </li>
-                    <li class="section__avatar is-capitan">
-                        <p class="section__li-p">WIZARD</p>
+                    <li class="section__avatar is-capitan" data-class="wizard">
+                        <p class="section__li-p" data-i18n="heroes.wizard">FEITICEIRO</p>
                     </li>
-                    <li class="section__avatar is-lutador">
-                        <p class="section__li-p">PALADIN</p>
-                    </li>
+                    <li class="section__avatar is-lutador" data-class="paladin">
+                        <p class="section__li-p" data-i18n="heroes.paladin">PALADINO</p>
                     </li>
                 </ul>
-                <img class="section__arrow is-arrow-left" src="./assets/arrow-left.svg"
-                    alt="Imagem de uma seta apontada para a esquerda">
-                <img class="section__arrow is-arrow-right" src="./assets/arrow-right.svg"
-                    alt="Imagem de uma seta apontada para a direita">
-                <div id="class-info-modal" class="class-info-modal" style="display:none;">
+                <img class="section__arrow is-arrow-left" src="./assets/arrow-left.svg" alt="Seta esquerda"
+                    data-i18n="alt.arrow_left">
+                <img class="section__arrow is-arrow-right" src="./assets/arrow-right.svg" alt="Seta direita"
+                    data-i18n="alt.arrow_right">
+
+                <!-- Modal de informações da classe -->
+                <div id="class-info-modal" class="class-info-modal">
                     <div class="class-info-content">
                         <span id="close-modal" style="cursor:pointer;float:right;font-size:20px;">&times;</span>
                         <h3 id="class-title"></h3>
@@ -168,7 +174,7 @@
         <section id="equipes" class="section is-bg-equipes">
             <div class="section__wrapper-header">
                 <h2 class="section__title">STAFF</h2>
-                <p class="section__description">
+                <p class="section__description" data-i18n="staff.description">
                     Infomarções sobre a Equipe.
                 </p>
             </div>
@@ -184,18 +190,18 @@
         </section>
         <section id="sobre" class="section is-bg-sobre">
             <div class="section__wrapper-header section__sobre">
-                <h2 class="section__title">Sobre Nós</h2>
-                <p class="section__description">
+                <h2 class="section__title" data-i18n="about.title">Sobre Nós</h2>
+                <p class="section__description" data-i18n="about.description1">
                     Por trás do Reunion Online está uma equipe verdadeiramente apaixonada por MMORPGs! Desde a infância,
                     vivemos a nostalgia e a magia de clássicos como Mu Online, sonhando em criar nosso próprio universo
                     onde cada jogador pudesse viver aventuras épicas.
                 </p>
-                <p class="section__description">
+                <p class="section__description" data-i18n="about.description2">
                     Esse sonho de criança se transformou em missão: desenvolver um MMORPG 2D inovador, feito com
                     dedicação, carinho e atenção aos detalhes. Reunion Online nasceu para proporcionar aquela sensação
                     única de descoberta, competição e comunidade que tanto marcou nossa juventude.
                 </p>
-                <p class="section__description">
+                <p class="section__description" data-i18n="about.description3">
                     Aqui, cada jogador tem a chance de escrever sua própria história e conquistar seu lugar entre os
                     melhores. Reunion Online não é apenas um jogo – é a realização de um sonho e um convite para você
                     fazer parte dessa aventura. Pronto para embarcar com a gente?
@@ -214,11 +220,12 @@
                 </a>
 
             </div>
-            <p class="footer__copywrite">© 2025 CrisSoft & Biridim, Inc. Todos os direitos reservados. Reunion Online.
+            <p class="footer__copywrite" data-i18n="footer.copyright">© 2025 CrisSoft & Biridim, Inc. Todos os direitos
+                reservados. Reunion Online.
             </p>
             <div class="footer__information">
-                <strong>Aviso de Privacidade</strong>
-                <strong>Termos de Uso</strong>
+                <strong data-i18n="footer.privacy">Aviso de Privacidade</strong>
+                <strong data-i18n="Terms of Use">Termos de Uso</strong>
             </div>
         </div>
         <button id="btnTopo" title="Voltar ao topo">↑</button>
@@ -228,6 +235,7 @@
     <script src="./class-info.js"></script>
     <script src="./button.js"></script>
     <script src="./rain.js"></script>
+    <script src="./translations.js"></script>
 </body>
 
 </html>

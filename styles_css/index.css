@@ -9,6 +9,7 @@
 
 /* Estilo do elemento Header*/
 @import url(./header.css);
+@import url(./translation.css);
 
 /* Estilo do elemento Body*/
 @import url(./rain.css);

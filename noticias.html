@@ -4,43 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Notícias - Reunion MMORPG</title>
+    <title data-i18n="news.title">Notícias - Reunion MMORPG</title>
     <link rel="stylesheet" href="styles_css/noticias.css">
+    <link rel="icon" href="./assets/LogoReunion.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-    <header class="noticias__header">
-        <h1>Notícias do Mundo de Reunion</h1>
-        <div class="noticias__voltar">
-            <a href="./index.html" class="btn__voltar">← Voltar para Home</a>
-        </div>
+    <div class="language-switcher">
+        <button id="language-btn" data-current-lang="pt-BR">EN</button>
+    </div>
 
+    <header class="noticias__header">
+        <h1 data-i18n="news.heading">Notícias do Mundo de Reunion</h1>
+        <div class="noticias__voltar">
+            <a href="./index.html" class="btn__voltar" data-i18n="news.back">← Voltar para Home</a>
+        </div>
     </header>
 
     <main class="noticias__main">
         <article class="noticia__card">
-            <h2>Reunion Online - Lançamento Oficial!</h2>
-            <p>
+            <h2 data-i18n="news.article1.title">Reunion Online - Lançamento Oficial!</h2>
+            <p data-i18n="news.article1.content">
                 O lançamento oficial está previsto para Agosto, então fique ligado e acompanhe todas as novidades no
-                nosso
-                Discord oficial.</p>
+                nosso Discord oficial.
+            </p>
             <span class="data__noticia">17/05/2025</span>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="https://discord.gg/HeDbeABSDH" target="_blank"
-                    style="display: inline-block; background-color: #5865F2; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+            <div class="discord-btn">
+                <a href="https://discord.gg/HeDbeABSDH" target="_blank" data-i18n="nav.discord">
                     <i class="fab fa-discord"></i> Entrar no Discord Oficial
                 </a>
             </div>
         </article>
 
         <article class="noticia__card">
-            <h2><i class="fas fa-flask" style="color: #ff9800; margin-right: 8px;"></i>Servidor Beta Aberto</h2>
-            <p>O servidor beta está aberto para todos testarem e aproveitar essa experiencia no Android ou Windows!</p>
+            <h2><i class="fas fa-flask" style="color: #ff9800; margin-right: 8px;"></i><span
+                    data-i18n="news.article2.title">Servidor Beta Aberto</span></h2>
+            <p data-i18n="news.article2.content">O servidor beta está aberto para todos testarem e aproveitar essa
+                experiencia no Android ou Windows!</p>
             <span class="data__noticia">10/05/2025</span>
         </article>
-
     </main>
+
+    <script src="./translations.js"></script>
 </body>
 
 </html>

@@ -7,28 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles_css/play-game.css">
     <link rel="icon" href="./assets/LogoReunion.png">
-    <title>Reunion Online - Play Gamer</title>
+    <title data-i18n="play.title">Reunion Online - Play Gamer</title>
+
+
 </head>
 
 <body>
+    
+
     <main class="main">
-        <h1 class="main__title">Reunion Online</h1>
-        <h2 class="main__subtitle">
+        <div class="language-switcher">
+        <button id="language-btn" data-current-lang="pt-BR">EN</button>
+    </div>
+        <h1 class="main__title" data-i18n="play.heading">Reunion Online</h1>
+        <h2 class="main__subtitle" data-i18n="play.subtitle">
             <br>
             Atualmente, Reunion Online está em fase BETA aberto! Participe agora e ajude a construir esse universo.<br>
             <br>
-            Baixe agora: Versão para <b>PC Windows</b> ou <b>Mobile Android</b>.
+            Baixe agora: Versão para <b data-i18n="play.pc">PC Windows</b> ou <b data-i18n="play.mobile">Mobile
+                Android</b>.
             <br>
         </h2>
         <div class="main__button">
             <a class="main__link" href="https://mega.nz/file/Oo1A2CYI#jrnH377V8fMqfB_OyG790i48I76OH3C0M5LLEfCeC2A"
-                target="_blank">BAIXAR PARA PC</a>
+                target="_blank" data-i18n="play.download_pc">BAIXAR PARA PC</a>
             <a class="main__link" href="https://mega.nz/file/e88jibQD#G7VjyAaFNrxCPPLiUVPnntUX4tzXAbKKDwDhK9H6s0I"
-                target="_blank">BAIXAR PARA ANDROID</a>
-            <a class="main__link" href="https://discord.gg/HeDbeABSDH" target="_blank">DISCORD</a>
-            <a class="main__link" href="./index.html">VOLTAR</a>
+                target="_blank" data-i18n="play.download_android">BAIXAR PARA ANDROID</a>
+            <a class="main__link" href="https://discord.gg/HeDbeABSDH" target="_blank"
+                data-i18n="nav.discord">DISCORD</a>
+            <a class="main__link" href="./index.html" data-i18n="play.back">VOLTAR</a>
         </div>
     </main>
+
+    <script src="./translations.js"></script>
+
 </body>
 
 </html>

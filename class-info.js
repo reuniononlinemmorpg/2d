@@ -1,39 +1,77 @@
 const classInfo = {
-    'is-cowboy': {
-        title: 'KNIGHT',
-        description: 'Cavaleiros usam todos os tipos de armas corpo a corpo. Suas principais tarefas em combate são [DPS] ou [TANQUE]. Eles têm várias habilidades que lhes permitem causar dano, atrair a atenção dos oponentes ou dar suporte a aliados. O principal atributo que aumenta o dano é [Força], e o suporte [Destreza].'
+    'knight': {
+        'pt-BR': {
+            title: 'CAVALEIRO',
+            description: 'Cavaleiros são mestres do combate corpo a corpo, especializados em armas pesadas. Atributos principais: [Força] para dano e [Vitalidade] para resistência. Funções: [Dano] ou [Tanque].'
+        },
+        'en': {
+            title: 'KNIGHT',
+            description: 'Knights are masters of melee combat, specialized in heavy weapons. Primary attributes: [Strength] for damage and [Vitality] for resistance. Roles: [Damage] or [Tank].'
+        }
     },
-    'is-lanceiro': {
-        title: 'RANGER',
-        description: 'Rangers usa principalmente arcos e bestas, sendo uma arma de longo alcance que pode atingir um único alvo, bem como vários alvos ao mesmo tempo. Suas principais tarefas em combate são [DPS] ou [Suporte]. A principal fonte de dano é [Destreza] e habilidades de suporte (Inteligência).'
+    'ranger': {
+        'pt-BR': {
+            title: 'ARQUEIRO',
+            description: 'Arqueiros são especialistas em ataques à distância com arcos e bestas. Atributos principais: [Destreza] para dano e [Agilidade] para esquiva. Funções: [Dano] ou [Suporte].'
+        },
+        'en': {
+            title: 'RANGER',
+            description: 'Rangers are experts in ranged attacks with bows and crossbows. Primary attributes: [Dexterity] for damage and [Agility] for evasion. Roles: [Damage] or [Support].'
+        }
     },
-    'is-capitan': {
-        title: 'WIZARD',
-        description: 'Wizards utiliza cajados que não são muito fortes para ataques físicos, mas que aumentam o poder dos feitiços lançados. Sua principal tarefa é apoiar a equipe com feitiços de curto e longo alcance. O dano depende totalmente de [Inteligência].'
+    'wizard': {
+        'pt-BR': {
+            title: 'FEITICEIRO',
+            description: 'Feiticeiros dominam magias elementais e de controle. Atributos principais: [Inteligência] para poder mágico e [Energia] para regeneração. Funções: [Dano Mágico] ou [Controle].'
+        },
+        'en': {
+            title: 'WIZARD',
+            description: 'Wizards master elemental and control spells. Primary attributes: [Intelligence] for magic power and [Energy] for regeneration. Roles: [Magic Damage] or [Crowd Control].'
+        }
     },
-    'is-lutador': {
-        title: 'PALADIN',
-        description: 'Paladinos são guerreiros sagrados. Eles podem ser guerreiros habilidosos, apoiando aliados com suas curas e habilidades de apoio.'
+    'paladin': {
+        'pt-BR': {
+            title: 'PALADINO',
+            description: 'Paladinos são guerreiros sagrados que combinam combate e habilidades de cura. Atributos principais: [Força] e [Fé]. Funções: [Suporte] ou [Tanque].'
+        },
+        'en': {
+            title: 'PALADIN',
+            description: 'Paladins are holy warriors who combine combat and healing abilities. Primary attributes: [Strength] and [Faith]. Roles: [Support] or [Tank].'
+        }
     }
 };
 
-document.querySelectorAll('.section__avatar').forEach(el => {
-    el.addEventListener('click', function () {
-        const className = Array.from(el.classList).find(c => classInfo[c]);
-        if (className) {
-            document.getElementById('class-title').textContent = classInfo[className].title;
-            document.getElementById('class-description').textContent = classInfo[className].description;
-            document.getElementById('class-info-modal').style.display = 'flex';
-        }
+// Mostrar modal quando um avatar for clicado
+document.querySelectorAll('.section__avatar').forEach(avatar => {
+    avatar.addEventListener('click', function() {
+        const classType = this.getAttribute('data-class');
+        const currentLang = document.documentElement.lang || 'pt-BR';
+        
+        document.getElementById('class-title').textContent = classInfo[classType][currentLang].title;
+        document.getElementById('class-description').textContent = classInfo[classType][currentLang].description;
+        document.getElementById('class-info-modal').classList.add('active');
     });
 });
 
-document.getElementById('close-modal').onclick = function () {
-    document.getElementById('class-info-modal').style.display = 'none';
-};
-window.onclick = function (event) {
-    const modal = document.getElementById('class-info-modal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
+// Fechar modal
+document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('class-info-modal').classList.remove('active');
+});
+
+// Fechar modal ao clicar fora
+document.getElementById('class-info-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.classList.remove('active');
     }
-};
+});
+
+// Atualizar modal quando o idioma mudar
+document.addEventListener('languageChanged', function() {
+    const activeModal = document.getElementById('class-info-modal').classList.contains('active');
+    if (activeModal) {
+        const activeAvatar = document.querySelector('.section__avatar:hover');
+        if (activeAvatar) {
+            activeAvatar.click(); // Simula o clique novamente para atualizar o conteúdo
+        }
+    }
+});

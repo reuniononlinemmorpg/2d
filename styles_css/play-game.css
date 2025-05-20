@@ -65,6 +65,31 @@
     transition: all .2s linear;
 }
 
+/* Botão de idioma */
+.language-switcher {
+    position: fixed; /* Alterado de absolute para fixed */
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Aumente o z-index para garantir que fique acima de outros elementos */
+}
+
+#language-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#language-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 @media (max-width: 768px) {
     .main__button {
         display: grid;
